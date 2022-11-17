@@ -1,4 +1,4 @@
-# Day 32 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)
-
+# Automatic Email Happy Birthday Sender(Python)
 
 A project which automates sending happy birthday emails!
+
