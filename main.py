@@ -4,7 +4,7 @@ import smtplib
 
 import pandas
 
-with open("./.credentials.txt") as file:
+with open("/home/milk/Python_Scripts/Python_Email_Birthday_Bot/.credentials.txt") as file:
     my_email = file.readline()
     password = file.readline()
 
@@ -12,7 +12,7 @@ with open("./.credentials.txt") as file:
 now = dt.datetime.now()
 current_month = now.month
 current_day = now.day
-data = pandas.read_csv("./birthdays.csv")
+data = pandas.read_csv("/home/milk/Python_Scripts/Python_Email_Birthday_Bot/birthdays.csv")
 
 
 # Grab birthdays from dictionary (account for same birthdays)
@@ -28,7 +28,7 @@ birthday_list = [
 letters = []
 if birthday_list:
     for i in range(1, 4):
-        with open(f"./letter_templates/letter_{i}.txt") as file:
+        with open(f"/home/milk/Python_Scripts/Python_Email_Birthday_Bot/letter_templates/letter_{i}.txt") as file:
             letters.append(file.read())
 
     # Pick a random letter
